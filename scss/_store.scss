@@ -1,0 +1,85 @@
+.st_banner{
+    position: relative;
+    .container{
+        max-width: 1110px;
+        span{
+            position: absolute;
+            bottom: 0px;
+            font-size: $font_l;
+            font-weight: bold;
+            line-height: 80px;
+            @include pad{
+                font-size: 28px;
+                line-height: 40px;
+            }
+            img{
+                margin-left: 24px;
+                @include pad{
+                    width: 24px;
+                }
+            }
+        }
+    }
+}
+
+.location__select{
+    margin: 22px 0 38px;
+    font-size: $font_m;
+    select{
+        width: 30%;
+        padding: 10px 19px;
+        border-color: #CED4DA;
+        margin-left: 20px;
+        @include pad{
+            width: 50%;
+        }
+    }
+}
+
+.lo_box{
+    margin-bottom: 52px;
+    @include pad{
+        margin-bottom: 36px;
+    }
+    .name{
+        font-size: $font_m;
+        padding: 12px 24px;
+        border: 1px solid #00000020;
+        border-top: 0px;
+        @include pad{
+            font-size: 16px;
+        }
+    }
+    .news{
+        padding: 16px 24px;
+        border: 1px solid #00000020;
+        @include pad{
+            padding: 16px;
+        }
+        span{
+            display: flex;
+            font-size: $font_s;
+            line-height: 30px;
+            align-items: baseline;
+            font-weight: bold;
+            @include pad{
+                font-size: 14px;
+            }
+            img{
+                margin-right: 12px;
+            }
+        }
+    }
+    .detailed_link{
+        display: block;
+        background-color: $black;
+        color: $white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 19px;
+        padding: 20px;
+        @include pad{
+            font-size: 14px;
+        }
+    }
+}

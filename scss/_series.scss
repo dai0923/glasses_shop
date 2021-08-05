@@ -1,0 +1,191 @@
+.series_link{
+    font-size: 42px;
+    line-height: 63px;
+    .container{
+        @include pad{
+            max-width: 100%;
+            padding: 0;
+            line-height: 42px;
+        }
+    }
+    ul{
+        display: flex;
+        justify-content: center;
+        li{
+            width: 33.33%;
+            border-bottom: 1px solid #DCDCDC;
+        }
+        a{
+            display: block;
+            border: 1px solid #DCDCDC;
+            text-align: center;
+            color: $black;
+            text-decoration: none;
+            border-bottom: 16px solid transparent;
+            padding: 24px 0px 8px;
+            @media (max-width: 1200px) {
+                font-size: 28px;
+                border-bottom: 8px solid transparent;
+                padding: 16px 0px 8px;
+            }
+            @media (max-width:680px) {
+                font-size: 14px;
+                padding: 8px 0px 4px;
+                line-height: 19px;
+                border-bottom: 4px solid transparent;
+            }
+            &:hover{
+                border-bottom: 16px solid $red;
+                transition: all 0.8s;
+                opacity: 1;
+                @media (max-width: 1200px) {
+                    border-bottom: 8px solid $red;
+                }
+                @media (max-width:680px) {
+                    border-bottom: 4px solid $red;
+                }
+            }
+            &.active{
+                border-bottom: 16px solid $red;
+                @media (max-width: 1200px) {
+                    border-bottom: 8px solid $red;
+                }
+                @media (max-width:680px) {
+                    border-bottom: 4px solid $red;
+                }
+            }
+        }
+        img{
+            vertical-align: middle;
+            @media (max-width: 1200px) {
+                width: 25px;
+            }
+            @media (max-width:680px) {
+                width: 14px;
+            }
+        }
+    }
+}
+
+.img_box{
+    display: flex;
+    justify-content: space-between;
+    .optical_bnr01{
+        background: url(../images/optical_bnr01.jpg) center;
+        background-size: cover;
+        height: 309px;
+        width: 48%;
+        @include pad{
+            width: 50%;
+        }
+        @include mobile{
+            height: 144px;
+        }
+    }
+    .optical_bnr02{
+        background: url(../images/optical_bnr02.jpg) center;
+        background-size: cover;
+        height: 309px;
+        width: 50%;
+        @include mobile{
+            height: 144px;
+        }
+    }
+}
+
+.pro{
+    padding: 88px 0px 186px;
+    @include pad{
+        padding: 40px 0px 104px;
+    }
+    @include mobile{
+        padding: 30px 0px 56px;
+    }
+    .title{
+        text-align: center;
+        margin-bottom: 40px;
+        @include mobile{
+            margin-bottom: 20px;
+        }
+        .en{
+            font-size: 42px;
+            line-height: 63px;
+            @include pad{
+                font-size: $font_l /2;
+                line-height: 48px;
+            }
+            @include mobile{
+                font-size: $font_m;
+            }
+        }
+        .ch{
+            font-size: $font_l /2;
+            line-height: 48px;
+            @include pad{
+                font-size: $font_m;
+                line-height: 48px;
+            }
+            @include mobile{
+                font-size: 16px;
+                line-height: 16px;
+            }
+        }
+    }
+}
+
+.pro_in{
+    margin-bottom: 104px;
+    @include pad{
+        margin-bottom: 72px;
+    }
+    @include mobile{
+        margin-bottom: 32px;
+    }
+    .news{
+        display: flex;
+        justify-content: space-between;
+        font-size: $font_m;
+        font-weight: bold;
+        line-height: 36px;
+        .price{
+            color: $red;
+        }
+        @include mobile{
+            font-size: 16px;
+        }
+    }
+    .color{
+        display: flex;
+        span{
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            display: block;
+            border-radius: 4px;
+        }
+        .brown{
+            background-color: #5F3E2D;
+        }
+        .orange{
+            background-color: #B75929;
+        }
+    }
+}
+
+.pagination{
+    justify-content: center;
+    .page-item{
+        &.active{
+            color: #FFf;
+            .page-link{
+                color: $white; 
+                background-color: $black;
+            }
+        }
+        .page-link{
+            border: 1px solid $black;
+            border-radius: 0px;
+            color: #555555; 
+        }
+    }
+}

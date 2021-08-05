@@ -1,0 +1,578 @@
+$red: #AA0601;
+$dark_red: #650300;
+$black: #000;
+$white: #fff;
+
+$font_l: 64px;
+$font_m: 24px;
+$font_s: 20px;
+
+body{
+    font-family: Noto Sans TC,-apple-system,BlinkMacSystemFont,Segoe UI,Microsoft JhengHei,Roboto,Helvetica Neue,Arial,sans-serif;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+header{
+    background-color: $red;
+    color: $white;
+    padding: 30px 80px;
+    @include pad{
+        padding: 30px 20px;
+    }
+    @include pad{
+        padding: 0px;
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        @include pad{
+            max-width: 100%;
+        }
+        @include mobile{
+            display: block;
+            text-align: center;
+            padding: 0px;
+        }
+    }
+    .logo_link{
+        display: block;
+        @include mobile{
+            padding: 10px 0;
+        }
+    }
+    ul{
+        display: flex;
+        @include mobile{
+            flex-wrap: wrap;
+        }
+        li{
+            align-self: center;
+            font-size: $font_s;
+            @include mobile{
+                width: 50%;
+            }
+        }
+        a{
+            color: $white;
+            text-decoration: none;
+            padding-left: 30px;
+            padding-right: 30px;
+            &:hover{
+                color: $white;
+            }
+            @include desktops{
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            @include pad{
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            @include mobile{
+                display: block;
+                border: 1px solid $white;
+                margin-bottom: -1px;
+                padding: 8px;
+            }
+        }
+    }
+}
+
+.banner{
+    background: url(../images/banner.png) center;
+    background-repeat: no-repeat;
+    height: 840px;
+    position: relative;
+    @include mobile{
+        height: 394px;
+        background-size: cover;
+    }
+    h1{
+        font-size: $font_l;
+        color: $dark_red;
+        font-weight: bold;
+        position: absolute;
+        right: 200px;
+        bottom: 300px;
+        text-align: right;
+        line-height: 96px;
+        @include pad{
+            right: 40px;
+            font-size: $font_m *2;
+            line-height: 72px;
+        }
+        @include mobile{
+            font-size: $font_l /2;
+            right: 15px;
+            bottom: 163px;
+        }
+        span{
+            display: block;
+            font-size: 36px;
+            line-height: 54px;
+            @include pad{
+                font-size: $font_s;
+                line-height: 30px;
+            }
+            @include mobile{
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.major{
+    background-color: #AA06010D;
+    padding: 64px 0px 80px;
+    @include pad{
+        padding: 40px;
+    }
+    @include mobile{
+        padding: 32px;
+    }
+    .container{
+        max-width: 1110px;
+        @include pad{
+            padding: 0 45px;
+        }
+    }
+    h2{
+        text-align: center;
+        color: $dark_red;
+        font-size: $font_m *2;
+        font-weight: bold;
+        line-height: 72px;
+        margin-bottom: 60px;
+        @include pad{
+            font-size: $font_l /2;
+            line-height: 48px;
+        }
+        @include mobile{
+            font-size: $font_m;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.major_icon{
+    text-align: center;
+    align-self: baseline;
+    @include mobile{
+        margin-bottom: 40px;
+    }
+    img{
+        margin-bottom: 40px;
+        @include pad{
+            max-width: 80px;
+        }
+        @include mobile{
+            margin-bottom: 16px;
+        }
+    }
+    .title{
+        font-size: $font_m;
+        color: $dark_red;
+        line-height: 36px;
+        font-weight: bold;
+    }
+    .text{
+        text-align: left;
+        line-height: 24px;
+    }
+}
+
+.classic{
+    padding: 64px 0px 80px;
+    @include pad{
+        padding: 40px 40px 20px;
+    }
+    @include mobile{
+        padding: 32px 15px;
+    }
+    .container{
+        max-width: 1110px;
+    }
+    h2{
+        text-align: center;
+        color: $dark_red;
+        font-size: $font_m *2;
+        font-weight: bold;
+        line-height: 72px;
+        margin-bottom: 60px;
+        @include pad{
+            font-size: $font_l /2;
+            margin-bottom: 32px;
+            line-height: 48px;
+        }
+        @include mobile{
+            font-size: $font_s;
+            margin-bottom: 20px;
+        }
+    }
+    .type{
+        align-items: center;
+        margin-bottom: 32px;
+        font-size: $font_m *2;
+        color: $red;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-style: italic;
+        @include pad{
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        @include mobile{
+            position: relative;
+            color: $white;
+        }
+        img{
+            vertical-align: middle;
+        }
+        .text_right{
+            text-align: right;
+            padding-right: 18px;
+            @include pad{
+                text-align: left;
+            }
+            @include mobile{
+                position: absolute;
+                text-align: center;
+            }
+        }
+        .text_left{
+            padding-left: 18px;
+            @include mobile{
+                position: absolute;
+                text-align: center;
+            }
+        }
+        .icon{
+            @include pad{
+                max-width: 28px;
+            }
+            @include mobile{
+                display: none;
+            }
+        }
+        .icon_w{
+            display: none;
+            @include mobile{
+                display: inline-block;
+            }
+        }
+    }
+    .middle_type{
+        @include pad{
+            display: flex;
+            flex-flow: row-reverse;
+        }
+    }
+}
+
+.joint{
+    background: url(../images/bg.png) center;
+    background-size: cover;
+    padding: 64px 0px 80px;
+    text-align: center;
+    @include pad{
+        padding: 40px;
+    }
+    @include mobile{
+        padding: 32px 15px;
+    }
+    .container{
+        max-width: 1110px;
+    }
+    h2{
+        text-align: center;
+        color: $white;
+        font-size: $font_m *2;
+        font-weight: bold;
+        line-height: 72px;
+        margin-bottom: 60px;
+        @include pad{
+            font-size: $font_l /2;
+            margin-bottom: 32px;
+            line-height: 48px;
+        }
+        @include mobile{
+            font-size: $font_s;
+            margin-bottom: 20px;
+        }
+    }
+    .pro_box{
+        @include mobile{
+            margin-bottom: 16px;
+        }
+        a{
+            figure{
+                position: relative;
+            }
+            &:hover .hover_bg{
+                display: flex;
+            }
+        }
+        .hover_bg{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(#fff, 0.5);
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        span{
+            color: $dark_red;
+            font-size: $font_m *3;
+            font-weight: bold;
+            white-space: nowrap;
+            @include pad{
+                font-size: $font_l /2;
+            }
+        }
+    }
+}
+
+.recommend{
+    padding: 64px 0px 80px;
+    @include pad{
+        padding: 20px;
+    }
+    .container{
+        max-width: 1110px;
+    }
+    h2{
+        text-align: center;
+        color: $dark_red;
+        font-size: $font_m *2;
+        font-weight: bold;
+        line-height: 72px;
+        margin-bottom: 60px;
+        @include pad{
+            font-size: $font_l /2;
+            margin-bottom: 32px;
+            line-height: 48px;
+        }
+        @include mobile{
+            font-size: $font_s;
+            margin-bottom: 20px;
+        }
+    }
+    .re_box{
+        justify-content: center;
+    }
+    .card{
+        padding: 0px;
+        max-width: 255px;
+        margin: 10px;
+        border-radius: 0px;
+        border-color: #DEE2E6;
+        font-weight: bold;
+        @include pad{
+            max-width: 330px;
+            margin-bottom: 28px;
+        }
+        @include mobile{
+            max-width: 100%;
+            margin: auto auto 16px;
+        }
+        .card-title{
+            color: #212529;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        .card-text{
+            line-height: 24px;
+            margin-bottom: 10px;
+        }
+        .time{
+            color: #707070;
+            font-size: 14px;
+        }
+    }
+}
+
+.contact{
+    padding: 64px 0px 80px;
+    background-color: #AA06010D;
+    @include pad{
+        padding: 40px;
+    }
+    @include mobile{
+        padding: 32px 15px;
+    }
+    .container{
+        max-width: 730px;
+        @include pad{
+            max-width: 450px;
+        }
+    }
+    h2{
+        text-align: center;
+        color: $black;
+        font-size: $font_m *2;
+        font-weight: bold;
+        line-height: 72px;
+        margin-bottom: 24px;
+        @include pad{
+            font-size: $font_l /2;
+            margin-bottom: 16px;
+            line-height: 48px;
+        }
+        @include mobile{
+            font-size: $font_s;
+            margin-bottom: 20px;
+        }
+    }
+    .sub{
+        font-size: $font_s;
+        line-height: 30px;
+        margin-bottom: 20px;
+        @include pad{
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    form{
+        input{
+            border-radius: 0px;
+            border-color: $black;
+        }
+        textarea{
+            width: 100%;
+            height: 100px;
+            border-radius: 0px;
+            border-color: $black;
+        }
+        .form-check{
+            label{
+                vertical-align: middle;
+            }
+        }
+        .btn{
+            width: 350px;
+            background-color: $red;
+            color: $white;
+            display: block;
+            margin: 40px auto 0px;
+            line-height: 24px;
+            border-radius: 0px;
+            padding: 16px 0px;
+            @include pad{
+                width: 210px;
+                padding: 8px 0px;
+                line-height: 21px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.footer{
+    padding: 36px 0px;
+    background-color: $red;
+    position: relative;
+    @include pad{
+        padding: 36px 20px;
+    }
+    .container{
+        max-width: 1110px;
+    }
+    .top{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 36px;
+        @include mobile{
+            float: right;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            @include mobile{
+                display: none;
+            }
+            a{
+                color: $white;
+                text-decoration: none;
+                margin-right: 48px;
+                @include pad{
+                    margin-right:20px;
+                }
+            }
+        }
+        .icon_box{
+            img{
+                margin-left: 32px;
+                @include pad{
+                    max-width: 24px;
+                    margin-left: 15px;
+                }
+                @include mobile{
+                    margin-left: 24px;
+                }
+            }
+        }
+    }
+    .ft_news{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        color: $white;
+        font-size: 36px;
+        @include pad{
+            font-size: $font_s;
+        }
+        img{
+            margin-right: 15px;
+            @include pad{
+                max-width: 24px;
+            }
+        }
+    }
+    hr{
+        color: $white;
+    }
+    .bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include mobile{
+            display: block;
+        }
+        img{
+            margin-right: 38px;
+            @include pad{
+                display: none;
+            }
+            @include mobile{
+                position: absolute;
+                right: 0px;
+                bottom: 20px;
+                display: block;
+                max-width: 46px;
+            }
+        }
+        p{
+            display: flex;
+            align-items: center;
+            color: $white;
+        }
+        a{
+            color: $white;
+            text-decoration: none;
+            font-size: 14px;
+            margin-left: 62px;
+            @include mobile{
+                display: block;
+                margin: 8px 0px;
+            }
+        }
+    }
+}
